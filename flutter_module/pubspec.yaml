@@ -1,0 +1,30 @@
+name: flutter_module
+description: "A new Flutter module project."
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.8.1
+
+dependencies:
+  flutter:
+    sdk: flutter
+  image_picker: 1.1.2
+  image_cropper: 9.1.0
+  signature: 6.3.0
+
+  cupertino_icons: ^1.0.8
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+
+
+flutter:
+  uses-material-design: true
+
+  module:
+    androidX: true
+    androidPackage: com.example.flutter_module2
+    iosBundleIdentifier: com.example.flutterModule2

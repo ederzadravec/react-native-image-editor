@@ -1,0 +1,23 @@
+{
+  "name": "react-native-flutter-image-editor",
+  "version": "1.0.0",
+  "main": "index.js",
+  "react-native": "index.js",
+  "keywords": [
+    "react-native",
+    "flutter",
+    "image editor"
+  ],
+  "files": [
+    "index.js",
+    "android/",
+    "ios/",
+    "flutter_image_editor_module/"
+  ],
+  "peerDependencies": {
+    "react-native": ">=0.60.0"
+  },
+  "devDependencies": {
+    "react-native": "^0.80.2"
+  }
+}
