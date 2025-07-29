@@ -26,5 +26,5 @@ flutter:
 
   module:
     androidX: true
-    androidPackage: com.example.flutter_module2
-    iosBundleIdentifier: com.example.flutterModule2
+    androidPackage: dev.ederzadravec.react-native-image-editor
+    iosBundleIdentifier: dev.ederzadravec.react-native-image-editor

@@ -1,10 +1,18 @@
 #!/bin/bash
-pwd 
-rm  -Rf ios/Flutter
-mkdir -p ios/Flutter
-cp -Rf flutter_module/* ios/Flutter
-cd ios/Flutter || exit 1
+
+set -e  # para parar no erro
+
+# Caminho para seu módulo Flutter
+FLUTTER_MODULE_PATH="flutter_module"
+
+# Limpa build e instala dependências Flutter
+cd "$FLUTTER_MODULE_PATH"
 flutter clean
 flutter pub get
-flutter build ios-framework --output=./Flutter
-cd ../..
+
+# Build dos frameworks iOS para múltiplas arquiteturas
+flutter build ios-framework --output=./Flutter --no-profile --no-debug
+
+cd ..
+# Roda script Node para cleanup (se existir)
+node scripts/prepublish-cleanup.js

@@ -18,7 +18,7 @@
   "scripts": {
     "build:android": "sh scripts/build_android.sh",
     "build:ios": "sh scripts/build_ios.sh",
-    "build": "npm run build:android && npm run build:ios",
+    "build": "yarn build:android && yarn build:ios",
     "prepublishOnly": "node scripts/prepublish-cleanup.js"
   },
   "peerDependencies": {
