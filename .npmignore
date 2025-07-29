@@ -1,0 +1,34 @@
+# Ignorar node_modules e builds locais
+node_modules
+build
+dist
+
+# Ignorar arquivos temporários
+*.log
+*.tmp
+*.swp
+.DS_Store
+
+# Ignorar configurações de IDEs
+.vscode
+.idea
+
+# Ignorar configurações específicas do Flutter
+flutter_module/.dart_tool/
+flutter_module/.idea/
+flutter_module/build/
+flutter_module/.packages
+flutter_module/pubspec.lock
+
+# Ignorar build iOS
+ios/Pods/
+ios/Podfile.lock
+ios/.symlinks/
+ios/Flutter/Flutter.framework/
+ios/Flutter/App.framework/
+ios/Flutter/Generated.xcconfig
+
+# Ignorar arquivos de testes ou exemplos, se não forem parte da lib
+__tests__/
+example/
+test/

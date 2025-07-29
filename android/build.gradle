@@ -1,9 +1,4 @@
-repositories {
-  maven { url "$rootDir/flutter_module/build/host/outputs/repo" }
-  maven { url "https://storage.googleapis.com/download.flutter.io" }
-}
-dependencies {
-  debugImplementation 'com.example.flutter_module:flutter_debug:1.0'
-  profileImplementation 'com.example.flutter_module:flutter_profile:1.0'
-  releaseImplementation 'com.example.flutter_module:flutter_release:1.0'
-}
+// flutter_module import
+setProperty("flutter.module.path", "flutter_module")
+
+apply from: "$flutterModulePath/.android/include_flutter.groovy"

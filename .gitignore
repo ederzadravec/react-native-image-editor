@@ -1,2 +1,60 @@
+# Node modules (projeto React Native)
+node_modules/
 
-node_modules
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Mac OS files
+.DS_Store
+
+# Flutter module - build outputs
+flutter_module/build/
+flutter_module/.dart_tool/
+flutter_module/.flutter-plugins
+flutter_module/.flutter-plugins-dependencies
+flutter_module/.packages
+
+# Flutter module - iOS build artifacts
+flutter_module/.ios/Flutter/Flutter.framework
+flutter_module/.ios/Flutter/Flutter.podspec
+flutter_module/.ios/Flutter/App.framework
+flutter_module/.ios/Flutter/Generated.xcconfig
+flutter_module/.ios/Flutter/ephemeral/
+
+flutter_module/Flutter/
+
+# Flutter module - Android build artifacts
+flutter_module/.android/.gradle/
+flutter_module/.android/build/
+flutter_module/.android/app/build/
+flutter_module/.android/local.properties
+
+# Flutter module - IDE files
+flutter_module/.idea/
+flutter_module/.vscode/
+
+# Flutter module - other generated files
+flutter_module/.metadata
+
+# iOS build artifacts (pod dependencies)
+ios/Pods/
+ios/Flutter/
+
+# Android build artifacts
+android/build/
+android/app/build/
+android/.gradle/
+android/local.properties
+android/flutter_module
+
+# Temporary files
+*.lock
+*.tmp
+*.swp
+*.swo
+*.log
+
+# IDE project files
+*.iml

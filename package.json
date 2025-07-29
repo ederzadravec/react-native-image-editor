@@ -1,8 +1,9 @@
 {
-  "name": "react-native-flutter-image-editor",
+  "name": "@ederzadravec/react-native-image-editor",
   "version": "1.0.0",
-  "main": "index.js",
-  "react-native": "index.js",
+  "main": "src/index.js",
+  "react-native": "src/index.js",
+  "nativePackage": true,
   "keywords": [
     "react-native",
     "flutter",
@@ -14,8 +15,15 @@
     "ios/",
     "flutter_image_editor_module/"
   ],
+  "scripts": {
+    "build:android": "sh scripts/build_android.sh",
+    "build:ios": "sh scripts/build_ios.sh",
+    "build": "npm run build:android && npm run build:ios",
+    "prepublishOnly": "node scripts/prepublish-cleanup.js"
+  },
   "peerDependencies": {
-    "react-native": ">=0.60.0"
+    "react": ">=17.0.0",
+    "react-native": ">=0.68.0"
   },
   "devDependencies": {
     "react-native": "^0.80.2"

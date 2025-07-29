@@ -1,2 +1,6 @@
-include ':flutter_image_editor'
-setProjectDir(':flutter_image_editor', file('../flutter_image_editor'))
+include ':app'
+setBinding(new Binding([gradle: this]))
+evaluate(new File(
+  settingsDir.parentFile,
+  'flutter_module/.android/include_flutter.groovy'
+))

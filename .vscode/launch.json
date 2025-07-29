@@ -1,0 +1,68 @@
+{
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "flutter_module",
+      "cwd": "flutter_module",
+      "request": "launch",
+      "type": "dart"
+    },
+    {
+      "name": "flutter_module (profile mode)",
+      "cwd": "flutter_module",
+      "request": "launch",
+      "type": "dart",
+      "flutterMode": "profile"
+    },
+    {
+      "name": "flutter_module (release mode)",
+      "cwd": "flutter_module",
+      "request": "launch",
+      "type": "dart",
+      "flutterMode": "release"
+    },
+    {
+      "name": "flutter_module",
+      "cwd": "android/flutter_module",
+      "request": "launch",
+      "type": "dart"
+    },
+    {
+      "name": "flutter_module (profile mode)",
+      "cwd": "android/flutter_module",
+      "request": "launch",
+      "type": "dart",
+      "flutterMode": "profile"
+    },
+    {
+      "name": "flutter_module (release mode)",
+      "cwd": "android/flutter_module",
+      "request": "launch",
+      "type": "dart",
+      "flutterMode": "release"
+    },
+    {
+      "name": "Flutter",
+      "cwd": "ios/Flutter",
+      "request": "launch",
+      "type": "dart"
+    },
+    {
+      "name": "Flutter (profile mode)",
+      "cwd": "ios/Flutter",
+      "request": "launch",
+      "type": "dart",
+      "flutterMode": "profile"
+    },
+    {
+      "name": "Flutter (release mode)",
+      "cwd": "ios/Flutter",
+      "request": "launch",
+      "type": "dart",
+      "flutterMode": "release"
+    }
+  ]
+}
