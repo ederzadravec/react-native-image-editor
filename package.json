@@ -10,10 +10,12 @@
     "image editor"
   ],
   "files": [
-    "index.js",
+    "src/index.js",
     "android/",
     "ios/",
-    "flutter_image_editor_module/"
+    "ios/Flutter/",
+    "flutter_module/",
+    "react-native-image-editor.podspec"
   ],
   "scripts": {
     "build:android": "sh scripts/build_android.sh",

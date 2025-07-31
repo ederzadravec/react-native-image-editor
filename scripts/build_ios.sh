@@ -1,18 +1,19 @@
 #!/bin/bash
 
-set -e  # para parar no erro
+set -e
 
-# Caminho para seu módulo Flutter
-FLUTTER_MODULE_PATH="flutter_module"
-
-# Limpa build e instala dependências Flutter
-cd "$FLUTTER_MODULE_PATH"
+echo "🧹 Limpando build antigo..."
+cd flutter_module
 flutter clean
 flutter pub get
 
-# Build dos frameworks iOS para múltiplas arquiteturas
-flutter build ios-framework --output=./Flutter --no-profile --no-debug
+echo "⚙️  Gerando iOS frameworks..."
+flutter build ios-framework --output=./Flutter --no-profile --no-debug --cocoapods
 
 cd ..
-# Roda script Node para cleanup (se existir)
-node scripts/prepublish-cleanup.js
+echo "🚚 Movendo frameworks para pasta ios/Flutter..."
+rm -rf ios/Flutter
+mkdir -p ios/Flutter
+mv flutter_module/Flutter/* ios/Flutter/
+
+echo "✅ Build finalizado com sucesso!"

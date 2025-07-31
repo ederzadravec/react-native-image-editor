@@ -1,7 +1,18 @@
+import Flutter
+import React
+
 @objc(ReactNativeImageEditor)
-class ReactNativeImageEditor: NSObject {
+class ReactNativeImageEditor: NSObject, RCTBridgeModule {
   private let CHANNEL = "react_native_image_editor"
   private var flutterEngine : FlutterEngine?
+
+  static func moduleName() -> String! {
+    return "ReactNativeImageEditor"
+  }
+
+  static func requiresMainQueueSetup() -> Bool {
+    return true
+  }
 
   @objc
   func initializeEngine() {

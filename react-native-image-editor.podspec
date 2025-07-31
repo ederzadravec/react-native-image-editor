@@ -1,30 +1,29 @@
 Pod::Spec.new do |s|
   s.name         = "react-native-image-editor"
   s.version      = "1.0.0"
-  s.summary      = "React Native bridge for Flutter-based image editor"
-  s.description  = "A native module that integrates a Flutter-based image editor into React Native."
+  s.summary      = "Native bridge to embed a Flutter image editor in React Native"
+  s.description  = "This React Native module embeds a Flutter image editor and communicates using FlutterEngine and MethodChannel."
   s.homepage     = "https://github.com/ederzadravec/react-native-image-editor"
-  s.license      = "MIT"
+  s.license      = { :type => "MIT", :file => "LICENSE" }
   s.author       = { "Eder Zadravec" => "ederzadravec@gmail.com" }
-  s.source       = { :git => "https://github.com/ederzadravec/react-native-image-editor.git", :tag => "#{s.version}" }
 
   s.platform     = :ios, "11.0"
-  s.requires_arc = true
-  s.swift_version = "5.0" # ou outra versão que você usa
+  s.source       = { :git => "https://github.com/ederzadravec/react-native-image-editor.git", :tag => "#{s.version}" }
 
-  # Apenas os arquivos nativos (iOS bridge)
-  s.source_files = "ios/**/*.{h,m,swift}"
+  s.source_files = "ios/**/*.{m,swift}"
 
-  # Evita conflitos com arquivos internos do Flutter
-  s.exclude_files = [
-    "flutter_module/.ios/Flutter/Flutter.podspec",
-    "flutter_module/.ios/Flutter/GeneratedPluginRegistrant/**/*",
-    "flutter_module/build/**",
-    "flutter_module/ios/**",
-    "flutter_module/.dart_tool/**",
-    "flutter_module/.packages",
-    "flutter_module/.flutter-plugins-dependencies"
+  s.vendored_frameworks = [
+    'ios/Flutter/Release/App.xcframework',
+    'ios/Flutter/Release/FlutterPluginRegistrant.xcframework'
   ]
+  s.exclude_files = ['android/**/*', '**/android/**/*']
+  s.preserve_paths = ['android']
 
-  # Dependência do Flutter será injetada via podhelper.rb no app
+  s.requires_arc = true
+  s.swift_version = "5.0"
+
+  s.dependency "Flutter"
+  s.dependency 'React-Core'
+  s.dependency 'React'
+
 end
